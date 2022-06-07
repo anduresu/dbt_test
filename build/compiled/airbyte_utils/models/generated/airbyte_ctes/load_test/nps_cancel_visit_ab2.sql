@@ -1,16 +1,8 @@
 
-
-  create  table
-    "houmdw_prod".airbyte_gspread."nps_cancel_visit__dbt_tmp"
-    
-    
-      compound sortkey(_airbyte_emitted_at)
-  as (
-    
 with __dbt__cte__nps_cancel_visit_ab1 as (
 
 -- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
--- depends_on: "houmdw_prod".airbyte_gspread._airbyte_raw_nps_cancel_visit
+-- depends_on: "houmdw_test".load_test._airbyte_raw_cancel_visit
 select
     case when json_extract_path_text(_airbyte_data, 'address', true) != '' then json_extract_path_text(_airbyte_data, 'address', true) end as address,
     case when json_extract_path_text(_airbyte_data, 'country', true) != '' then json_extract_path_text(_airbyte_data, 'country', true) end as country,
@@ -25,12 +17,10 @@ select
     _airbyte_ab_id,
     _airbyte_emitted_at,
     getdate() as _airbyte_normalized_at
-from "houmdw_prod".airbyte_gspread._airbyte_raw_nps_cancel_visit as table_alias
+from "houmdw_test".load_test._airbyte_raw_cancel_visit as table_alias
 -- nps_cancel_visit
 where 1 = 1
-),  __dbt__cte__nps_cancel_visit_ab2 as (
-
--- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
+)-- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
 -- depends_on: __dbt__cte__nps_cancel_visit_ab1
 select
     cast(address as varchar) as address,
@@ -49,34 +39,3 @@ select
 from __dbt__cte__nps_cancel_visit_ab1
 -- nps_cancel_visit
 where 1 = 1
-),  __dbt__cte__nps_cancel_visit_ab3 as (
-
--- SQL model to build a hash column based on the values of this record
--- depends_on: __dbt__cte__nps_cancel_visit_ab2
-select
-    md5(cast(coalesce(cast(address as varchar), '') || '-' || coalesce(cast(country as varchar), '') || '-' || coalesce(cast(comments as varchar), '') || '-' || coalesce(cast(appraiser as varchar), '') || '-' || coalesce(cast(begin_date as varchar), '') || '-' || coalesce(cast(visit_type as varchar), '') || '-' || coalesce(cast(property_id as varchar), '') || '-' || coalesce(cast(schedule_id as varchar), '') || '-' || coalesce(cast(recommendation as varchar), '') || '-' || coalesce(cast(answer_timestamp as varchar), '') as varchar)) as _airbyte_nps_cancel_visit_hashid,
-    tmp.*
-from __dbt__cte__nps_cancel_visit_ab2 tmp
--- nps_cancel_visit
-where 1 = 1
-)-- Final base SQL model
--- depends_on: __dbt__cte__nps_cancel_visit_ab3
-select
-    address,
-    country,
-    comments,
-    appraiser,
-    begin_date,
-    visit_type,
-    property_id,
-    schedule_id,
-    recommendation,
-    answer_timestamp,
-    _airbyte_ab_id,
-    _airbyte_emitted_at,
-    getdate() as _airbyte_normalized_at,
-    _airbyte_nps_cancel_visit_hashid
-from __dbt__cte__nps_cancel_visit_ab3
--- nps_cancel_visit from "houmdw_prod".airbyte_gspread._airbyte_raw_nps_cancel_visit
-where 1 = 1
-  );

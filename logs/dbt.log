@@ -1,0 +1,731 @@
+
+
+============================== 2022-06-07 21:38:07.488300 | 96636827-7687-4be0-bb9e-aced8a07087a ==============================
+21:38:07.488300 [info ] [MainThread]: Running with dbt=1.0.7
+21:38:07.488503 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.build.BuildTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, indirect_selection='eager', log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/Users/andresarredondo/.dbt', project_dir=None, record_timing_info=None, resource_types=[], rpc_method='build', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, store_failures=False, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='build', write_json=None)
+21:38:07.488594 [debug] [MainThread]: Tracking: do not track
+21:38:07.508656 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+21:38:07.529100 [debug] [MainThread]: Parsing macros/should_full_refresh.sql
+21:38:07.532592 [debug] [MainThread]: Parsing macros/incremental.sql
+21:38:07.535579 [debug] [MainThread]: Parsing macros/get_custom_schema.sql
+21:38:07.535851 [debug] [MainThread]: Parsing macros/star_intersect.sql
+21:38:07.541299 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+21:38:07.541692 [debug] [MainThread]: Parsing macros/cross_db_utils/quote.sql
+21:38:07.542429 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+21:38:07.543424 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+21:38:07.548396 [debug] [MainThread]: Parsing macros/cross_db_utils/json_operations.sql
+21:38:07.566255 [debug] [MainThread]: Parsing macros/cross_db_utils/surrogate_key.sql
+21:38:07.567532 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+21:38:07.567855 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+21:38:07.568272 [debug] [MainThread]: Parsing macros/cross_db_utils/type_conversions.sql
+21:38:07.570981 [debug] [MainThread]: Parsing macros/cross_db_utils/array.sql
+21:38:07.578004 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+21:38:07.578667 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+21:38:07.582384 [debug] [MainThread]: Parsing macros/catalog.sql
+21:38:07.590748 [debug] [MainThread]: Parsing macros/relations.sql
+21:38:07.591109 [debug] [MainThread]: Parsing macros/adapters.sql
+21:38:07.610495 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+21:38:07.610957 [debug] [MainThread]: Parsing macros/catalog.sql
+21:38:07.612275 [debug] [MainThread]: Parsing macros/relations.sql
+21:38:07.613176 [debug] [MainThread]: Parsing macros/adapters.sql
+21:38:07.627277 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+21:38:07.628259 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+21:38:07.630299 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+21:38:07.631489 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+21:38:07.632365 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+21:38:07.641976 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+21:38:07.649254 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+21:38:07.656489 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+21:38:07.659016 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+21:38:07.660013 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+21:38:07.660973 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+21:38:07.663322 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+21:38:07.669789 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+21:38:07.670601 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+21:38:07.676319 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+21:38:07.685285 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+21:38:07.689438 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+21:38:07.690828 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+21:38:07.694742 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+21:38:07.695363 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+21:38:07.696729 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+21:38:07.697832 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+21:38:07.701054 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+21:38:07.710044 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+21:38:07.710749 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+21:38:07.711947 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+21:38:07.712694 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+21:38:07.713114 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+21:38:07.713356 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+21:38:07.713672 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+21:38:07.714555 [debug] [MainThread]: Parsing macros/etc/statement.sql
+21:38:07.716799 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+21:38:07.721164 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+21:38:07.722196 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+21:38:07.723492 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+21:38:07.728358 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+21:38:07.729783 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+21:38:07.731951 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+21:38:07.735667 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+21:38:07.740765 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+21:38:07.742221 [debug] [MainThread]: Parsing macros/cross_db_utils/except.sql
+21:38:07.742710 [debug] [MainThread]: Parsing macros/cross_db_utils/replace.sql
+21:38:07.743294 [debug] [MainThread]: Parsing macros/cross_db_utils/concat.sql
+21:38:07.743748 [debug] [MainThread]: Parsing macros/cross_db_utils/datatypes.sql
+21:38:07.746450 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_relation.sql
+21:38:07.746993 [debug] [MainThread]: Parsing macros/cross_db_utils/length.sql
+21:38:07.747582 [debug] [MainThread]: Parsing macros/cross_db_utils/dateadd.sql
+21:38:07.749044 [debug] [MainThread]: Parsing macros/cross_db_utils/intersect.sql
+21:38:07.749516 [debug] [MainThread]: Parsing macros/cross_db_utils/right.sql
+21:38:07.750627 [debug] [MainThread]: Parsing macros/cross_db_utils/datediff.sql
+21:38:07.756046 [debug] [MainThread]: Parsing macros/cross_db_utils/safe_cast.sql
+21:38:07.756894 [debug] [MainThread]: Parsing macros/cross_db_utils/hash.sql
+21:38:07.757536 [debug] [MainThread]: Parsing macros/cross_db_utils/cast_bool_to_text.sql
+21:38:07.758196 [debug] [MainThread]: Parsing macros/cross_db_utils/identifier.sql
+21:38:07.758976 [debug] [MainThread]: Parsing macros/cross_db_utils/position.sql
+21:38:07.759704 [debug] [MainThread]: Parsing macros/cross_db_utils/literal.sql
+21:38:07.760126 [debug] [MainThread]: Parsing macros/cross_db_utils/current_timestamp.sql
+21:38:07.761811 [debug] [MainThread]: Parsing macros/cross_db_utils/width_bucket.sql
+21:38:07.764623 [debug] [MainThread]: Parsing macros/cross_db_utils/last_day.sql
+21:38:07.766331 [debug] [MainThread]: Parsing macros/cross_db_utils/split_part.sql
+21:38:07.767276 [debug] [MainThread]: Parsing macros/cross_db_utils/date_trunc.sql
+21:38:07.768024 [debug] [MainThread]: Parsing macros/cross_db_utils/_is_ephemeral.sql
+21:38:07.768984 [debug] [MainThread]: Parsing macros/materializations/insert_by_period_materialization.sql
+21:38:07.782645 [debug] [MainThread]: Parsing macros/web/get_url_host.sql
+21:38:07.783621 [debug] [MainThread]: Parsing macros/web/get_url_path.sql
+21:38:07.784918 [debug] [MainThread]: Parsing macros/web/get_url_parameter.sql
+21:38:07.785661 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_log_format.sql
+21:38:07.786178 [debug] [MainThread]: Parsing macros/jinja_helpers/pretty_time.sql
+21:38:07.786740 [debug] [MainThread]: Parsing macros/jinja_helpers/log_info.sql
+21:38:07.787255 [debug] [MainThread]: Parsing macros/jinja_helpers/slugify.sql
+21:38:07.787810 [debug] [MainThread]: Parsing macros/schema_tests/fewer_rows_than.sql
+21:38:07.788673 [debug] [MainThread]: Parsing macros/schema_tests/equal_rowcount.sql
+21:38:07.789462 [debug] [MainThread]: Parsing macros/schema_tests/relationships_where.sql
+21:38:07.790568 [debug] [MainThread]: Parsing macros/schema_tests/recency.sql
+21:38:07.791482 [debug] [MainThread]: Parsing macros/schema_tests/not_constant.sql
+21:38:07.792062 [debug] [MainThread]: Parsing macros/schema_tests/accepted_range.sql
+21:38:07.793282 [debug] [MainThread]: Parsing macros/schema_tests/not_accepted_values.sql
+21:38:07.794336 [debug] [MainThread]: Parsing macros/schema_tests/test_unique_where.sql
+21:38:07.795010 [debug] [MainThread]: Parsing macros/schema_tests/at_least_one.sql
+21:38:07.795613 [debug] [MainThread]: Parsing macros/schema_tests/unique_combination_of_columns.sql
+21:38:07.797023 [debug] [MainThread]: Parsing macros/schema_tests/cardinality_equality.sql
+21:38:07.798023 [debug] [MainThread]: Parsing macros/schema_tests/expression_is_true.sql
+21:38:07.798885 [debug] [MainThread]: Parsing macros/schema_tests/not_null_proportion.sql
+21:38:07.799967 [debug] [MainThread]: Parsing macros/schema_tests/sequential_values.sql
+21:38:07.801359 [debug] [MainThread]: Parsing macros/schema_tests/test_not_null_where.sql
+21:38:07.802035 [debug] [MainThread]: Parsing macros/schema_tests/equality.sql
+21:38:07.803822 [debug] [MainThread]: Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+21:38:07.808912 [debug] [MainThread]: Parsing macros/sql/date_spine.sql
+21:38:07.811316 [debug] [MainThread]: Parsing macros/sql/nullcheck_table.sql
+21:38:07.812085 [debug] [MainThread]: Parsing macros/sql/get_relations_by_pattern.sql
+21:38:07.813809 [debug] [MainThread]: Parsing macros/sql/generate_series.sql
+21:38:07.815977 [debug] [MainThread]: Parsing macros/sql/get_relations_by_prefix.sql
+21:38:07.817770 [debug] [MainThread]: Parsing macros/sql/get_tables_by_prefix_sql.sql
+21:38:07.818571 [debug] [MainThread]: Parsing macros/sql/star.sql
+21:38:07.820325 [debug] [MainThread]: Parsing macros/sql/unpivot.sql
+21:38:07.824507 [debug] [MainThread]: Parsing macros/sql/union.sql
+21:38:07.829048 [debug] [MainThread]: Parsing macros/sql/groupby.sql
+21:38:07.829678 [debug] [MainThread]: Parsing macros/sql/surrogate_key.sql
+21:38:07.831375 [debug] [MainThread]: Parsing macros/sql/safe_add.sql
+21:38:07.832142 [debug] [MainThread]: Parsing macros/sql/nullcheck.sql
+21:38:07.832922 [debug] [MainThread]: Parsing macros/sql/get_tables_by_pattern_sql.sql
+21:38:07.836258 [debug] [MainThread]: Parsing macros/sql/get_column_values.sql
+21:38:07.838821 [debug] [MainThread]: Parsing macros/sql/pivot.sql
+21:38:07.840910 [debug] [MainThread]: Parsing macros/sql/get_query_results_as_dict.sql
+21:38:07.842035 [debug] [MainThread]: Parsing macros/sql/haversine_distance.sql
+21:38:08.035236 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_tables/load_test/nps_cancel_visit.sql
+21:38:08.043642 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_tables/load_test/nps_cancel_visit.sql
+21:38:08.044405 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/load_test/nps_cancel_visit_ab1.sql
+21:38:08.074774 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/load_test/nps_cancel_visit_ab1.sql
+21:38:08.075356 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/load_test/nps_cancel_visit_ab3.sql
+21:38:08.085624 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/load_test/nps_cancel_visit_ab3.sql
+21:38:08.086205 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/load_test/nps_cancel_visit_ab2.sql
+21:38:08.090325 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/load_test/nps_cancel_visit_ab2.sql
+21:38:08.125946 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.airbyte_utils.generated.airbyte_views
+- models.airbyte_utils.generated.airbyte_incremental
+
+21:38:08.134152 [info ] [MainThread]: Found 4 models, 0 tests, 0 snapshots, 0 analyses, 523 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+21:38:08.134692 [info ] [MainThread]: 
+21:38:08.134885 [debug] [MainThread]: Acquiring new redshift connection "master"
+21:38:08.135227 [debug] [ThreadPool]: Acquiring new redshift connection "list_houmdw_test"
+21:38:08.140539 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test"
+21:38:08.140613 [debug] [ThreadPool]: On list_houmdw_test: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "list_houmdw_test"} */
+
+    select distinct nspname from pg_namespace
+  
+21:38:08.140698 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:38:08.140774 [debug] [ThreadPool]: Redshift adapter: Connecting to Redshift using 'database' credentials
+21:38:09.572954 [debug] [ThreadPool]: SQL status: SELECT in 1.43 seconds
+21:38:09.578392 [debug] [ThreadPool]: On list_houmdw_test: Close
+21:38:09.580812 [debug] [ThreadPool]: Acquiring new redshift connection "list_houmdw_test_load_test"
+21:38:09.593171 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test_load_test"
+21:38:09.593442 [debug] [ThreadPool]: On list_houmdw_test_load_test: BEGIN
+21:38:09.593597 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:38:09.593750 [debug] [ThreadPool]: Redshift adapter: Connecting to Redshift using 'database' credentials
+21:38:10.872811 [debug] [ThreadPool]: SQL status: BEGIN in 1.28 seconds
+21:38:10.873664 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test_load_test"
+21:38:10.873944 [debug] [ThreadPool]: On list_houmdw_test_load_test: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "list_houmdw_test_load_test"} */
+select
+      'houmdw_test' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'load_test'
+    union all
+    select
+      'houmdw_test' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'load_test'
+  
+21:38:11.044691 [debug] [ThreadPool]: SQL status: SELECT in 0.17 seconds
+21:38:11.051514 [debug] [ThreadPool]: On list_houmdw_test_load_test: ROLLBACK
+21:38:11.188010 [debug] [ThreadPool]: On list_houmdw_test_load_test: Close
+21:38:11.201924 [debug] [MainThread]: Using redshift connection "master"
+21:38:11.202248 [debug] [MainThread]: On master: BEGIN
+21:38:11.202415 [debug] [MainThread]: Opening a new connection, currently in state init
+21:38:11.202581 [debug] [MainThread]: Redshift adapter: Connecting to Redshift using 'database' credentials
+21:38:12.474067 [debug] [MainThread]: SQL status: BEGIN in 1.27 seconds
+21:38:12.475092 [debug] [MainThread]: Using redshift connection "master"
+21:38:12.475471 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:38:12.657731 [debug] [MainThread]: SQL status: SELECT in 0.18 seconds
+21:38:12.661282 [debug] [MainThread]: On master: ROLLBACK
+21:38:12.798659 [debug] [MainThread]: Using redshift connection "master"
+21:38:12.799008 [debug] [MainThread]: On master: BEGIN
+21:38:13.067880 [debug] [MainThread]: SQL status: BEGIN in 0.27 seconds
+21:38:13.068888 [debug] [MainThread]: On master: COMMIT
+21:38:13.069254 [debug] [MainThread]: Using redshift connection "master"
+21:38:13.069599 [debug] [MainThread]: On master: COMMIT
+21:38:13.215770 [debug] [MainThread]: SQL status: COMMIT in 0.15 seconds
+21:38:13.216708 [debug] [MainThread]: On master: Close
+21:38:13.218404 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+21:38:13.219054 [info ] [MainThread]: 
+21:38:13.229744 [debug] [Thread-1  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab1
+21:38:13.230361 [debug] [Thread-1  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab1"
+21:38:13.230552 [debug] [Thread-1  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab1
+21:38:13.230740 [debug] [Thread-1  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab1
+21:38:13.247633 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab1"
+21:38:13.248590 [debug] [Thread-1  ]: finished collecting timing info
+21:38:13.248952 [debug] [Thread-1  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab1
+21:38:13.249353 [debug] [Thread-3  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab2
+21:38:13.249674 [debug] [Thread-3  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab2"
+21:38:13.249815 [debug] [Thread-3  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab2
+21:38:13.249919 [debug] [Thread-3  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab2
+21:38:13.271197 [debug] [Thread-3  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab2"
+21:38:13.271599 [debug] [Thread-3  ]: finished collecting timing info
+21:38:13.271854 [debug] [Thread-3  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab2
+21:38:13.272146 [debug] [Thread-2  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab3
+21:38:13.272485 [debug] [Thread-2  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab3"
+21:38:13.272636 [debug] [Thread-2  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab3
+21:38:13.272731 [debug] [Thread-2  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab3
+21:38:13.287329 [debug] [Thread-2  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab3"
+21:38:13.287602 [debug] [Thread-2  ]: finished collecting timing info
+21:38:13.287803 [debug] [Thread-2  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab3
+21:38:13.288051 [debug] [Thread-4  ]: Began running node model.airbyte_utils.nps_cancel_visit
+21:38:13.288235 [info ] [Thread-4  ]: 1 of 1 START table model load_test.nps_cancel_visit..................................................................... [RUN]
+21:38:13.288507 [debug] [Thread-4  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit"
+21:38:13.288583 [debug] [Thread-4  ]: Began compiling node model.airbyte_utils.nps_cancel_visit
+21:38:13.288655 [debug] [Thread-4  ]: Compiling model.airbyte_utils.nps_cancel_visit
+21:38:13.294397 [debug] [Thread-4  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit"
+21:38:13.294736 [debug] [Thread-4  ]: finished collecting timing info
+21:38:13.294817 [debug] [Thread-4  ]: Began executing node model.airbyte_utils.nps_cancel_visit
+21:38:13.316734 [debug] [Thread-4  ]: Writing runtime SQL for node "model.airbyte_utils.nps_cancel_visit"
+21:38:13.317121 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+21:38:13.317183 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: BEGIN
+21:38:13.317234 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+21:38:13.317288 [debug] [Thread-4  ]: Redshift adapter: Connecting to Redshift using 'database' credentials
+21:38:14.576137 [debug] [Thread-4  ]: SQL status: BEGIN in 1.26 seconds
+21:38:14.577735 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+21:38:14.578138 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "node_id": "model.airbyte_utils.nps_cancel_visit"} */
+
+
+  create  table
+    "houmdw_test".load_test."nps_cancel_visit__dbt_tmp"
+    
+    
+      compound sortkey(_airbyte_emitted_at)
+    
+  as (
+    
+with __dbt__cte__nps_cancel_visit_ab1 as (
+
+-- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
+-- depends_on: "houmdw_test".load_test._airbyte_raw_cancel_visit
+select
+    case when json_extract_path_text(_airbyte_data, 'address', true) != '' then json_extract_path_text(_airbyte_data, 'address', true) end as address,
+    case when json_extract_path_text(_airbyte_data, 'country', true) != '' then json_extract_path_text(_airbyte_data, 'country', true) end as country,
+    case when json_extract_path_text(_airbyte_data, 'comments', true) != '' then json_extract_path_text(_airbyte_data, 'comments', true) end as comments,
+    case when json_extract_path_text(_airbyte_data, 'appraiser', true) != '' then json_extract_path_text(_airbyte_data, 'appraiser', true) end as appraiser,
+    case when json_extract_path_text(_airbyte_data, 'begin_date', true) != '' then json_extract_path_text(_airbyte_data, 'begin_date', true) end as begin_date,
+    case when json_extract_path_text(_airbyte_data, 'visit_type', true) != '' then json_extract_path_text(_airbyte_data, 'visit_type', true) end as visit_type,
+    case when json_extract_path_text(_airbyte_data, 'property_id', true) != '' then json_extract_path_text(_airbyte_data, 'property_id', true) end as property_id,
+    case when json_extract_path_text(_airbyte_data, 'schedule_id', true) != '' then json_extract_path_text(_airbyte_data, 'schedule_id', true) end as schedule_id,
+    case when json_extract_path_text(_airbyte_data, 'recommendation', true) != '' then json_extract_path_text(_airbyte_data, 'recommendation', true) end as recommendation,
+    case when json_extract_path_text(_airbyte_data, 'answer_timestamp', true) != '' then json_extract_path_text(_airbyte_data, 'answer_timestamp', true) end as answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at
+from "houmdw_test".load_test._airbyte_raw_cancel_visit as table_alias
+-- nps_cancel_visit
+where 1 = 1
+),  __dbt__cte__nps_cancel_visit_ab2 as (
+
+-- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
+-- depends_on: __dbt__cte__nps_cancel_visit_ab1
+select
+    cast(address as varchar) as address,
+    cast(country as varchar) as country,
+    cast(comments as varchar) as comments,
+    cast(appraiser as varchar) as appraiser,
+    cast(begin_date as varchar) as begin_date,
+    cast(visit_type as varchar) as visit_type,
+    cast(property_id as varchar) as property_id,
+    cast(schedule_id as varchar) as schedule_id,
+    cast(recommendation as varchar) as recommendation,
+    cast(answer_timestamp as varchar) as answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at
+from __dbt__cte__nps_cancel_visit_ab1
+-- nps_cancel_visit
+where 1 = 1
+),  __dbt__cte__nps_cancel_visit_ab3 as (
+
+-- SQL model to build a hash column based on the values of this record
+-- depends_on: __dbt__cte__nps_cancel_visit_ab2
+select
+    md5(cast(coalesce(cast(address as varchar), '') || '-' || coalesce(cast(country as varchar), '') || '-' || coalesce(cast(comments as varchar), '') || '-' || coalesce(cast(appraiser as varchar), '') || '-' || coalesce(cast(begin_date as varchar), '') || '-' || coalesce(cast(visit_type as varchar), '') || '-' || coalesce(cast(property_id as varchar), '') || '-' || coalesce(cast(schedule_id as varchar), '') || '-' || coalesce(cast(recommendation as varchar), '') || '-' || coalesce(cast(answer_timestamp as varchar), '') as varchar)) as _airbyte_cancel_visit_hashid,
+    tmp.*
+from __dbt__cte__nps_cancel_visit_ab2 tmp
+-- nps_cancel_visit
+where 1 = 1
+)-- Final base SQL model
+-- depends_on: __dbt__cte__nps_cancel_visit_ab3
+select
+    address,
+    country,
+    comments,
+    appraiser,
+    begin_date,
+    visit_type,
+    property_id,
+    schedule_id,
+    recommendation,
+    answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at,
+    _airbyte_nps_cancel_visit_hashid
+from __dbt__cte__nps_cancel_visit_ab3
+-- nps_cancel_visit from "houmdw_test".load_test._airbyte_raw_cancel_visit
+where 1 = 1
+  );
+21:38:14.726703 [debug] [Thread-4  ]: Postgres adapter: Postgres error: column "_airbyte_nps_cancel_visit_hashid" does not exist in __dbt__cte__nps_cancel_visit_ab3
+
+21:38:14.727725 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: ROLLBACK
+21:38:14.865305 [debug] [Thread-4  ]: finished collecting timing info
+21:38:14.866213 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: Close
+21:38:14.867572 [debug] [Thread-4  ]: Database Error in model nps_cancel_visit (models/generated/airbyte_tables/load_test/nps_cancel_visit.sql)
+  column "_airbyte_nps_cancel_visit_hashid" does not exist in __dbt__cte__nps_cancel_visit_ab3
+  compiled SQL at build/run/airbyte_utils/models/generated/airbyte_tables/load_test/nps_cancel_visit.sql
+21:38:14.868482 [error] [Thread-4  ]: 1 of 1 ERROR creating table model load_test.nps_cancel_visit............................................................ [[31mERROR[0m in 1.58s]
+21:38:14.869033 [debug] [Thread-4  ]: Finished running node model.airbyte_utils.nps_cancel_visit
+21:38:14.870927 [debug] [MainThread]: Acquiring new redshift connection "master"
+21:38:14.871342 [debug] [MainThread]: Using redshift connection "master"
+21:38:14.871554 [debug] [MainThread]: On master: BEGIN
+21:38:14.871743 [debug] [MainThread]: Opening a new connection, currently in state closed
+21:38:14.871929 [debug] [MainThread]: Redshift adapter: Connecting to Redshift using 'database' credentials
+21:38:16.127001 [debug] [MainThread]: SQL status: BEGIN in 1.26 seconds
+21:38:16.127755 [debug] [MainThread]: On master: COMMIT
+21:38:16.128103 [debug] [MainThread]: Using redshift connection "master"
+21:38:16.128435 [debug] [MainThread]: On master: COMMIT
+21:38:16.267703 [debug] [MainThread]: SQL status: COMMIT in 0.14 seconds
+21:38:16.268627 [debug] [MainThread]: On master: Close
+21:38:16.270403 [info ] [MainThread]: 
+21:38:16.271041 [info ] [MainThread]: Finished running 1 table model in 8.14s.
+21:38:16.271467 [debug] [MainThread]: Connection 'master' was properly closed.
+21:38:16.271688 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab1' was properly closed.
+21:38:16.271904 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab2' was properly closed.
+21:38:16.272133 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab3' was properly closed.
+21:38:16.272384 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit' was properly closed.
+21:38:16.289823 [info ] [MainThread]: 
+21:38:16.290126 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+21:38:16.290374 [info ] [MainThread]: 
+21:38:16.290568 [error] [MainThread]: [33mDatabase Error in model nps_cancel_visit (models/generated/airbyte_tables/load_test/nps_cancel_visit.sql)[0m
+21:38:16.290757 [error] [MainThread]:   column "_airbyte_nps_cancel_visit_hashid" does not exist in __dbt__cte__nps_cancel_visit_ab3
+21:38:16.290935 [error] [MainThread]:   compiled SQL at build/run/airbyte_utils/models/generated/airbyte_tables/load_test/nps_cancel_visit.sql
+21:38:16.291126 [info ] [MainThread]: 
+21:38:16.291308 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+
+
+============================== 2022-06-07 22:12:53.392521 | 8ba8674e-78c9-4e81-98b2-376449f443e8 ==============================
+22:12:53.392521 [info ] [MainThread]: Running with dbt=1.0.7
+22:12:53.392912 [debug] [MainThread]: running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=None, defer=None, event_buffer_size=None, exclude=None, fail_fast=None, full_refresh=False, log_cache_events=False, log_format=None, partial_parse=None, printer_width=None, profile=None, profiles_dir='/Users/andresarredondo/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='run', write_json=None)
+22:12:53.393002 [debug] [MainThread]: Tracking: do not track
+22:12:53.442815 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+22:12:53.443130 [debug] [MainThread]: Partial parsing: updated file: airbyte_utils://models/generated/airbyte_tables/load_test/nps_cancel_visit.sql
+22:12:53.450541 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_tables/load_test/nps_cancel_visit.sql
+22:12:53.459713 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_tables/load_test/nps_cancel_visit.sql
+22:12:53.464113 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.airbyte_utils.generated.airbyte_incremental
+- models.airbyte_utils.generated.airbyte_views
+
+22:12:53.472736 [info ] [MainThread]: Found 4 models, 0 tests, 0 snapshots, 0 analyses, 523 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics
+22:12:53.473371 [info ] [MainThread]: 
+22:12:53.473586 [debug] [MainThread]: Acquiring new redshift connection "master"
+22:12:53.473976 [debug] [ThreadPool]: Acquiring new redshift connection "list_houmdw_test"
+22:12:53.479547 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test"
+22:12:53.479623 [debug] [ThreadPool]: On list_houmdw_test: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "list_houmdw_test"} */
+
+    select distinct nspname from pg_namespace
+  
+22:12:53.479686 [debug] [ThreadPool]: Opening a new connection, currently in state init
+22:12:53.479743 [debug] [ThreadPool]: Redshift adapter: Connecting to Redshift using 'database' credentials
+22:12:54.961392 [debug] [ThreadPool]: SQL status: SELECT in 1.48 seconds
+22:12:54.967567 [debug] [ThreadPool]: On list_houmdw_test: Close
+22:12:54.970043 [debug] [ThreadPool]: Acquiring new redshift connection "list_houmdw_test_load_test"
+22:12:54.982027 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test_load_test"
+22:12:54.982265 [debug] [ThreadPool]: On list_houmdw_test_load_test: BEGIN
+22:12:54.982417 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+22:12:54.982567 [debug] [ThreadPool]: Redshift adapter: Connecting to Redshift using 'database' credentials
+22:12:56.258973 [debug] [ThreadPool]: SQL status: BEGIN in 1.28 seconds
+22:12:56.259895 [debug] [ThreadPool]: Using redshift connection "list_houmdw_test_load_test"
+22:12:56.260237 [debug] [ThreadPool]: On list_houmdw_test_load_test: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "list_houmdw_test_load_test"} */
+select
+      'houmdw_test' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'load_test'
+    union all
+    select
+      'houmdw_test' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'load_test'
+  
+22:12:56.437800 [debug] [ThreadPool]: SQL status: SELECT in 0.18 seconds
+22:12:56.446033 [debug] [ThreadPool]: On list_houmdw_test_load_test: ROLLBACK
+22:12:56.586899 [debug] [ThreadPool]: On list_houmdw_test_load_test: Close
+22:12:56.600850 [debug] [MainThread]: Using redshift connection "master"
+22:12:56.601098 [debug] [MainThread]: On master: BEGIN
+22:12:56.601256 [debug] [MainThread]: Opening a new connection, currently in state init
+22:12:56.601407 [debug] [MainThread]: Redshift adapter: Connecting to Redshift using 'database' credentials
+22:12:57.842442 [debug] [MainThread]: SQL status: BEGIN in 1.24 seconds
+22:12:57.843255 [debug] [MainThread]: Using redshift connection "master"
+22:12:57.843868 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+22:12:58.032775 [debug] [MainThread]: SQL status: SELECT in 0.19 seconds
+22:12:58.036429 [debug] [MainThread]: On master: ROLLBACK
+22:12:58.172391 [debug] [MainThread]: Using redshift connection "master"
+22:12:58.173322 [debug] [MainThread]: On master: BEGIN
+22:12:58.458675 [debug] [MainThread]: SQL status: BEGIN in 0.28 seconds
+22:12:58.459693 [debug] [MainThread]: On master: COMMIT
+22:12:58.460056 [debug] [MainThread]: Using redshift connection "master"
+22:12:58.460405 [debug] [MainThread]: On master: COMMIT
+22:12:58.606653 [debug] [MainThread]: SQL status: COMMIT in 0.15 seconds
+22:12:58.607603 [debug] [MainThread]: On master: Close
+22:12:58.609430 [info ] [MainThread]: Concurrency: 4 threads (target='prod')
+22:12:58.610279 [info ] [MainThread]: 
+22:12:58.619613 [debug] [Thread-1  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab1
+22:12:58.620331 [debug] [Thread-1  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab1"
+22:12:58.620528 [debug] [Thread-1  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab1
+22:12:58.620750 [debug] [Thread-1  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab1
+22:12:58.644539 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab1"
+22:12:58.645096 [debug] [Thread-1  ]: finished collecting timing info
+22:12:58.645431 [debug] [Thread-1  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab1
+22:12:58.645985 [debug] [Thread-3  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab2
+22:12:58.646339 [debug] [Thread-3  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab2"
+22:12:58.646470 [debug] [Thread-3  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab2
+22:12:58.646581 [debug] [Thread-3  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab2
+22:12:58.669123 [debug] [Thread-3  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab2"
+22:12:58.669575 [debug] [Thread-3  ]: finished collecting timing info
+22:12:58.669830 [debug] [Thread-3  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab2
+22:12:58.670178 [debug] [Thread-2  ]: Began running node model.airbyte_utils.nps_cancel_visit_ab3
+22:12:58.670429 [debug] [Thread-2  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit_ab3"
+22:12:58.670512 [debug] [Thread-2  ]: Began compiling node model.airbyte_utils.nps_cancel_visit_ab3
+22:12:58.670595 [debug] [Thread-2  ]: Compiling model.airbyte_utils.nps_cancel_visit_ab3
+22:12:58.691292 [debug] [Thread-2  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit_ab3"
+22:12:58.691519 [debug] [Thread-2  ]: finished collecting timing info
+22:12:58.691693 [debug] [Thread-2  ]: Finished running node model.airbyte_utils.nps_cancel_visit_ab3
+22:12:58.691903 [debug] [Thread-4  ]: Began running node model.airbyte_utils.nps_cancel_visit
+22:12:58.692022 [info ] [Thread-4  ]: 1 of 1 START table model load_test.nps_cancel_visit..................................................................... [RUN]
+22:12:58.692226 [debug] [Thread-4  ]: Acquiring new redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:12:58.692315 [debug] [Thread-4  ]: Began compiling node model.airbyte_utils.nps_cancel_visit
+22:12:58.692383 [debug] [Thread-4  ]: Compiling model.airbyte_utils.nps_cancel_visit
+22:12:58.697541 [debug] [Thread-4  ]: Writing injected SQL for node "model.airbyte_utils.nps_cancel_visit"
+22:12:58.698026 [debug] [Thread-4  ]: finished collecting timing info
+22:12:58.698094 [debug] [Thread-4  ]: Began executing node model.airbyte_utils.nps_cancel_visit
+22:12:58.717800 [debug] [Thread-4  ]: Writing runtime SQL for node "model.airbyte_utils.nps_cancel_visit"
+22:12:58.718023 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:12:58.718081 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: BEGIN
+22:12:58.718129 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+22:12:58.718179 [debug] [Thread-4  ]: Redshift adapter: Connecting to Redshift using 'database' credentials
+22:12:59.954671 [debug] [Thread-4  ]: SQL status: BEGIN in 1.24 seconds
+22:12:59.955690 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:12:59.956021 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "node_id": "model.airbyte_utils.nps_cancel_visit"} */
+
+
+  create  table
+    "houmdw_test".load_test."nps_cancel_visit__dbt_tmp"
+    
+    
+      compound sortkey(_airbyte_emitted_at)
+    
+  as (
+    
+with __dbt__cte__nps_cancel_visit_ab1 as (
+
+-- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
+-- depends_on: "houmdw_test".load_test._airbyte_raw_cancel_visit
+select
+    case when json_extract_path_text(_airbyte_data, 'address', true) != '' then json_extract_path_text(_airbyte_data, 'address', true) end as address,
+    case when json_extract_path_text(_airbyte_data, 'country', true) != '' then json_extract_path_text(_airbyte_data, 'country', true) end as country,
+    case when json_extract_path_text(_airbyte_data, 'comments', true) != '' then json_extract_path_text(_airbyte_data, 'comments', true) end as comments,
+    case when json_extract_path_text(_airbyte_data, 'appraiser', true) != '' then json_extract_path_text(_airbyte_data, 'appraiser', true) end as appraiser,
+    case when json_extract_path_text(_airbyte_data, 'begin_date', true) != '' then json_extract_path_text(_airbyte_data, 'begin_date', true) end as begin_date,
+    case when json_extract_path_text(_airbyte_data, 'visit_type', true) != '' then json_extract_path_text(_airbyte_data, 'visit_type', true) end as visit_type,
+    case when json_extract_path_text(_airbyte_data, 'property_id', true) != '' then json_extract_path_text(_airbyte_data, 'property_id', true) end as property_id,
+    case when json_extract_path_text(_airbyte_data, 'schedule_id', true) != '' then json_extract_path_text(_airbyte_data, 'schedule_id', true) end as schedule_id,
+    case when json_extract_path_text(_airbyte_data, 'recommendation', true) != '' then json_extract_path_text(_airbyte_data, 'recommendation', true) end as recommendation,
+    case when json_extract_path_text(_airbyte_data, 'answer_timestamp', true) != '' then json_extract_path_text(_airbyte_data, 'answer_timestamp', true) end as answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at
+from "houmdw_test".load_test._airbyte_raw_cancel_visit as table_alias
+-- nps_cancel_visit
+where 1 = 1
+),  __dbt__cte__nps_cancel_visit_ab2 as (
+
+-- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
+-- depends_on: __dbt__cte__nps_cancel_visit_ab1
+select
+    cast(address as varchar) as address,
+    cast(country as varchar) as country,
+    cast(comments as varchar) as comments,
+    cast(appraiser as varchar) as appraiser,
+    cast(begin_date as varchar) as begin_date,
+    cast(visit_type as varchar) as visit_type,
+    cast(property_id as varchar) as property_id,
+    cast(schedule_id as varchar) as schedule_id,
+    cast(recommendation as varchar) as recommendation,
+    cast(answer_timestamp as varchar) as answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at
+from __dbt__cte__nps_cancel_visit_ab1
+-- nps_cancel_visit
+where 1 = 1
+),  __dbt__cte__nps_cancel_visit_ab3 as (
+
+-- SQL model to build a hash column based on the values of this record
+-- depends_on: __dbt__cte__nps_cancel_visit_ab2
+select
+    md5(cast(coalesce(cast(address as varchar), '') || '-' || coalesce(cast(country as varchar), '') || '-' || coalesce(cast(comments as varchar), '') || '-' || coalesce(cast(appraiser as varchar), '') || '-' || coalesce(cast(begin_date as varchar), '') || '-' || coalesce(cast(visit_type as varchar), '') || '-' || coalesce(cast(property_id as varchar), '') || '-' || coalesce(cast(schedule_id as varchar), '') || '-' || coalesce(cast(recommendation as varchar), '') || '-' || coalesce(cast(answer_timestamp as varchar), '') as varchar)) as _airbyte_cancel_visit_hashid,
+    tmp.*
+from __dbt__cte__nps_cancel_visit_ab2 tmp
+-- nps_cancel_visit
+where 1 = 1
+)-- Final base SQL model
+-- depends_on: __dbt__cte__nps_cancel_visit_ab3
+select
+    address,
+    country,
+    comments,
+    appraiser,
+    begin_date,
+    visit_type,
+    property_id,
+    schedule_id,
+    recommendation,
+    answer_timestamp,
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    getdate() as _airbyte_normalized_at,
+    _airbyte_cancel_visit_hashid
+from __dbt__cte__nps_cancel_visit_ab3
+-- nps_cancel_visit from "houmdw_test".load_test._airbyte_raw_cancel_visit
+where 1 = 1
+  );
+22:13:00.410412 [debug] [Thread-4  ]: SQL status: SELECT in 0.45 seconds
+22:13:00.426685 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:00.427034 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "node_id": "model.airbyte_utils.nps_cancel_visit"} */
+alter table "houmdw_test".load_test."nps_cancel_visit__dbt_tmp" rename to "nps_cancel_visit"
+22:13:00.563131 [debug] [Thread-4  ]: SQL status: ALTER TABLE in 0.14 seconds
+22:13:00.620616 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: COMMIT
+22:13:00.620796 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:00.620884 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: COMMIT
+22:13:00.817851 [debug] [Thread-4  ]: SQL status: COMMIT in 0.2 seconds
+22:13:00.819039 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:00.819438 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: BEGIN
+22:13:00.956538 [debug] [Thread-4  ]: SQL status: BEGIN in 0.14 seconds
+22:13:00.970255 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:00.970514 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: /* {"app": "dbt", "dbt_version": "1.0.7", "profile_name": "houm", "target_name": "prod", "node_id": "model.airbyte_utils.nps_cancel_visit"} */
+drop table if exists "houmdw_test".load_test."nps_cancel_visit__dbt_backup" cascade
+22:13:01.103673 [debug] [Thread-4  ]: SQL status: DROP TABLE in 0.13 seconds
+22:13:01.106770 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: COMMIT
+22:13:01.107145 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:01.107461 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: COMMIT
+22:13:01.249291 [debug] [Thread-4  ]: SQL status: COMMIT in 0.14 seconds
+22:13:01.250106 [debug] [Thread-4  ]: Using redshift connection "model.airbyte_utils.nps_cancel_visit"
+22:13:01.250451 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: BEGIN
+22:13:01.387133 [debug] [Thread-4  ]: SQL status: BEGIN in 0.14 seconds
+22:13:01.389490 [debug] [Thread-4  ]: finished collecting timing info
+22:13:01.389999 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: ROLLBACK
+22:13:01.526988 [debug] [Thread-4  ]: On model.airbyte_utils.nps_cancel_visit: Close
+22:13:01.529833 [info ] [Thread-4  ]: 1 of 1 OK created table model load_test.nps_cancel_visit................................................................ [[32mSELECT[0m in 2.84s]
+22:13:01.530694 [debug] [Thread-4  ]: Finished running node model.airbyte_utils.nps_cancel_visit
+22:13:01.533190 [debug] [MainThread]: Acquiring new redshift connection "master"
+22:13:01.533616 [debug] [MainThread]: Using redshift connection "master"
+22:13:01.533821 [debug] [MainThread]: On master: BEGIN
+22:13:01.534008 [debug] [MainThread]: Opening a new connection, currently in state closed
+22:13:01.534235 [debug] [MainThread]: Redshift adapter: Connecting to Redshift using 'database' credentials
+22:13:02.792084 [debug] [MainThread]: SQL status: BEGIN in 1.26 seconds
+22:13:02.793015 [debug] [MainThread]: On master: COMMIT
+22:13:02.793356 [debug] [MainThread]: Using redshift connection "master"
+22:13:02.793679 [debug] [MainThread]: On master: COMMIT
+22:13:02.933157 [debug] [MainThread]: SQL status: COMMIT in 0.14 seconds
+22:13:02.934287 [debug] [MainThread]: On master: Close
+22:13:02.936022 [info ] [MainThread]: 
+22:13:02.936694 [info ] [MainThread]: Finished running 1 table model in 9.46s.
+22:13:02.937165 [debug] [MainThread]: Connection 'master' was properly closed.
+22:13:02.937386 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab1' was properly closed.
+22:13:02.937601 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab2' was properly closed.
+22:13:02.937835 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit_ab3' was properly closed.
+22:13:02.938049 [debug] [MainThread]: Connection 'model.airbyte_utils.nps_cancel_visit' was properly closed.
+22:13:02.956057 [info ] [MainThread]: 
+22:13:02.956421 [info ] [MainThread]: [32mCompleted successfully[0m
+22:13:02.956694 [info ] [MainThread]: 
+22:13:02.956890 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
